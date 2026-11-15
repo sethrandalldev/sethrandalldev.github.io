@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Authentication</title>
+</head>
+<body>
+  <main>
+    <article>
+      <p><a href="../index.html">← Back to home</a></p>
+      <header>
+        <p><time datetime="2026-11-15">November 15, 2026</time></p>
+        <h1>Authentication</h1>
+      </header>
+      <p>I'm working on a project to understand authentication and authorization. It feels pretty simple at first, add authentication so that a user has to log in and then authorize that a user is able to access certain data or pages.</p>
+      <p>As I dive deeper, it can get complex. For most users, it isn't noticeable at all if your auth is built correctly because it is easy to allow people to use or view a resource. The hard part is ensuring that someone who shouldn't have access doesn't.</p>
+      <p>My project was a form that if you enter a correct secret code, you get access to a secret page with a secret message set in the backend environment variables. The process starts by first checking if you have the correct secret code. Next, set a server-side session cookie with a random value token, in this case a 32-character string.</p>
+      <p>Now you get redirected to the secret page where the secret message is displayed. On this new request you have to check that the session cookie is valid and has not been tampered with. If it checks out, you would receive a response saying you are authenticated and then show you the secret message.</p>
+      <p>There are many ways you could implement this that might be more secure or scalable, this is only a learning project after all. The key takeaway for me was often a great customer experience relies on a more complicated system but that complexity shouldn't be visible to the user or hinder their experience.</p>
+
+    </article>
+  </main>
+</body>
+</html>
